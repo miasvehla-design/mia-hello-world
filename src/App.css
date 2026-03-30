@@ -1,14 +1,131 @@
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
 }
 
-h1 {
-  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
-  font-size: 2.5rem;
-  font-weight: 300;
-  color: #2d3748;
-  letter-spacing: -0.02em;
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e3a5f;
+}
+
+.subtitle {
+  color: #64748b;
+  margin-top: 0.35rem;
+  font-size: 1rem;
+}
+
+/* layout */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 680px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* card */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.card h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1e3a5f;
+  margin-bottom: 1.25rem;
+}
+
+/* inputs */
+.inputs label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1.1rem;
+}
+
+.inputs label span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+.inputs input {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1e293b;
+  transition: border-color 0.15s;
+  outline: none;
+}
+
+.inputs input:focus {
+  border-color: #0f766e;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.12);
+}
+
+/* result */
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.payment {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #0f766e;
+  margin-bottom: 1.5rem;
+}
+
+.summary {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.summary > div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.summary .label {
+  color: #64748b;
+}
+
+.summary .value {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.summary .value.accent {
+  color: #0f766e;
+}
+
+/* chart */
+.chart-section {
+  padding-bottom: 1.25rem;
+}
+
+.chart-section h2 {
+  margin-bottom: 0.75rem;
 }
